@@ -1,0 +1,23 @@
+{
+    // 필수부분
+    "manifest_version" : 2,
+    "name" : "가자가자가제",
+    "version" : "1.0.0",
+
+    // 추천 부분
+    "desciption" : "연습합니다 sgv",
+    //"default_locale" : "ko",
+
+    // 앱 구현 방식 선택
+    "sidebar_action" : {
+        "default_page" : "practice_svg.html",
+        "default_icon" : {
+            "16" : "Tshrit.jpg"
+        },
+        "default_title" : "가자가자과자",
+        "use_navigation_bar" : true
+    }
+
+    // 그 외 : 필요한 것을 선택적으로 추가
+
+}
