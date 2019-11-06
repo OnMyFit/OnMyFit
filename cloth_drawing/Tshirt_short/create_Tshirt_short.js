@@ -62,7 +62,7 @@ cloth.btn_create.addEventListener("click",function(){
 
     d_path = d_path+"M "+point_cloth_bottom_center_x+" "+point_cloth_bottom_center_y;
 
-    var point_cloth_bottom_right_x = point_cloth_bottom_center_x+cloth.data_chest*0.5;
+    var point_cloth_bottom_right_x = point_cloth_bottom_center_x+cloth.data_chest*0.5+2;
     var point_cloth_bottom_right_y = point_cloth_bottom_center_y;
 
     d_path = d_path+"L "+point_cloth_bottom_right_x+" "+point_cloth_bottom_right_y;
@@ -70,9 +70,19 @@ cloth.btn_create.addEventListener("click",function(){
     var point_chest_right_x = point_start_x+cloth.data_chest*0.5;
     var point_chest_right_y = point_start_y+31;
 
-    d_path = d_path+"L "+point_chest_right_x+" "+point_chest_right_y;
+    var point_chest_control_01_x = point_start_x+cloth.data_chest*0.5+1.5;
+    var point_chest_control_01_y = point_cloth_bottom_right_y-(point_cloth_bottom_right_y-point_chest_right_y)*0.02;
+    var point_chest_control_02_x = point_start_x+cloth.data_chest*0.5+0.5;
+    var point_chest_control_02_y = point_cloth_bottom_right_y-(point_cloth_bottom_right_y-point_chest_right_y)*0.75;
+
+
+
+    d_path = d_path+"C "+point_chest_control_01_x+" "+point_chest_control_01_y+" "+point_chest_control_02_x+" "+point_chest_control_02_y+" "+point_chest_right_x+" "+point_chest_right_y;
+    //d_path = d_path+"L "+point_chest_right_x+" "+point_chest_right_y;
     d_path = d_path+"L "+point_sleeve_bottom_x+" "+point_sleeve_bottom_y;
-    
+    d_path = d_path+"M "+point_shoulder_x+" "+point_shoulder_y;
+    d_path = d_path+"L "+point_chest_right_x+" "+point_chest_right_y;
+
     document.getElementById("path_01").setAttribute("d", d_path);
     document.getElementById("path_01").setAttribute("stroke-width", "0.5");
     document.getElementById("path_02").setAttribute("d", d_path);
