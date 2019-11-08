@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charser="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>자바스크립트 기초</title>
+    <style>
+    body { font-size: 3rem; }
+    h1 {
+      background: #fff000;
+    }
+    </style>
+    <!-- <script>
+    //문서가 로드가 될 때까지 기다려줘야한다.
+      // window.onload = function () {
+      //   var title = document.getElementById('main-title');
+      //   console.log(title);
+      // };
+
+      // load는 모든 문서가 로드가 되고 난 후에 실행
+      // DOMContentLoaded는 DOM구조가 로드된 후에 실행
+
+      window.addEventListener('DOMContentLoaded', function () {
+        var title = document.getElementById('main-title');
+        console.log(title);
+      });
+    </script> -->
+  </head>
+  <body>
+    <h1 id="main-title">
+      <span>hello</span>
+      DOM (Document Object Model)
+      <small>small</small>
+    </h1>
+    <ul>
+      <a href="ready.html">
+      <li class="ilbuni"><img src="../images/omf_icon.png"></li>
+      </a>
+      <li class="ilbuni"><img src="../images/omf_icon.png"></li>
+      <li class="ilbuni"><img src="../images/omf_icon.png"></li>
+    </ul>
+
+    <!-- 문서에 있는 객체들을 알아보는 모델 -->
+    <article>
+      <header class="main-header">header</header>
+
+      <section>
+        <header>s header</header>
+        section1
+      </section>
+
+      <section>
+        <header>s header</header>
+        section2
+      </section>
+    </article>
+
+    <script>
+      // var title = document.getElementById('main-title');
+      // var titlespan = title.getElementsByTagName('span');
+      // console.log(title);
+      // console.log(titlespan[0]);
+      var mailTitle = document.querySelector('#main-title small')
+      console.log(mailTitle);
+    </script>
+
+
+    <!-- <script>
+
+    var person = {};
+    person.username = '동네79';
+    person.age = 12;
+    person.introduce = function () {
+      console.log('안녕? 나는 ' + this.username + '야. 나이는 ' + this.age + '살이야.');
+    };
+
+    var person2 = {
+      username: 'Zena',
+      age: 20,
+      introduce: function () {
+        console.log('안녕? 나는 ' + this.username + '야. 나이는 ' + this.age +'살이야.');
+      }
+    };
+
+    person.introduce();
+    person2.introduce();
+
+    // 생성자(constructor)
+    function Person(username, age) { // 생성자는 대문자로 시작.
+      this.username = username;
+      this.age = age;
+      this.introduce = function () {
+        console.log('안녕? 나는' + this.username + '야. 나이는 ' + this.age + '살이야.')
+      }
+    }
+
+    // 인스턴스(instance)
+    var p1 = new Person('동네79', 20); //new를 하지 않으면 window 전역개체가 찍히게 된다.
+    var p2 = new Person('일분이', 3);
+
+    p1.introduce();
+    p2.introduce();
+    // </script> -->
+  </body>
+</html>
