@@ -63,9 +63,14 @@ cloth.btn_create.addEventListener("click",function(){
     d_path = d_path+"M "+point_cloth_bottom_center_x+" "+point_cloth_bottom_center_y;
 
     var point_cloth_bottom_right_x = point_cloth_bottom_center_x+cloth.data_chest*0.5+2;
-    var point_cloth_bottom_right_y = point_cloth_bottom_center_y;
+    var point_cloth_bottom_right_y = point_cloth_bottom_center_y-3;
 
-    d_path = d_path+"L "+point_cloth_bottom_right_x+" "+point_cloth_bottom_right_y;
+    var point_cloth_bottom_control_01_x = point_cloth_bottom_center_x+cloth.data_chest*0.5*0.3;
+    var point_cloth_bottom_control_01_y = point_start_y+cloth.data_height;
+    var point_cloth_bottom_control_02_x = point_cloth_bottom_center_x+cloth.data_chest*0.5*0.7;
+    var point_cloth_bottom_control_02_y= point_start_y+cloth.data_height;
+
+    d_path = d_path+"C "+point_cloth_bottom_control_01_x+" "+point_cloth_bottom_control_01_y+" "+point_cloth_bottom_control_02_x+" "+point_cloth_bottom_control_02_y+" "+point_cloth_bottom_right_x+" "+point_cloth_bottom_right_y;
 
     var point_chest_right_x = point_start_x+cloth.data_chest*0.5;
     var point_chest_right_y = point_start_y+31;
