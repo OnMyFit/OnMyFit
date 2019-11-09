@@ -1,115 +1,151 @@
-//
-//
-// whale.storage.local.set({key: value}, function() {
-//   console.log('Value is set to ' + value);
-// });
-//
-// whale.storage.local.get(['key'], function(result) {
-//   console.log('Value currently is ' + result.key);
-// });
+class Top {
+  constructor(id, top_id, top_name, top_chest, top_arm, top_shoulder, top_height) {
+    this.id = id;
+    this.top_id = top_id;
+    this.top_name = top_name;
+    this.top_chest = top_chest;
+    this.top_arm = top_arm;
+    this.top_shoulder = top_shoulder;
+    this.top_height = top_height;
+  }
+}
 
+class Bottom {
+  constructor(id, bottom_id, bottom_name, bottom_edge, bottom_waist, bottom_under, bottom_thigh, bottom_height) {
+    this.id = id;
+    this.bottom_id = bottom_id;
+    this.bottom_name = bottom_name;
+    this.bottom_edge = bottom_edge;
+    this.bottom_waist = bottom_waist;
+    this.bottom_under = bottom_under;
+    this.bottom_thigh = bottom_thigh;
+    this.bottom_height = bottom_height;
+  }
+}
 
-// switch (document.getElementById()) {
-//   case expression:
-//
-//     break;
-//   default:
+class Skirt {
+  constructor(id, skirt_id, skirt_name, skirt_edge, skirt_waist, skirt_height) {
+    this.id = id;
+    this.skirt_id = skirt_id;
+    this.skirt_name = skirt_name;
+    this.skirt_edge = skirt_edge;
+    this.skirt_waist = skirt_waist;
+    this.skirt_height = skirt_height;
+  }
+}
 
-// }
+class Onepiece {
+  constructor(id, onepiece_id, onepiece_name, onepiece_Chest, onepiece_shoulder, onepiece_arm, onepiece_heigth) {
+    this.id = id;
+    this.onepiece_id = onepiece_id;
+    this.onepiece_name = onepiece_name;
+    this.onepiece_Chest = onepiece_Chest;
+    this.onepiece_shoulder = onepiece_shoulder;
+    this.onepiece_arm = onepiece_arm;
+    this.onepiece_heigth = onepiece_heigth;
+  }
+}
 
-var objTop = {};
-// var objBottom = {};
-// var objSkirt = {};
-// var objOnepiece = {};
-// var objLong = {};
+class Long {
+  constructor(id, long_id, longDress_name, longDress_Chest, longDress_shoulder, longDress_arm, longDress_edge, longDress_height, longDress_waist) {
+    this.id = id;
+    this.long_id = long_id;
+    this.longDress_name = longDress_name;
+    this.longDress_Chest = longDress_Chest;
+    this.longDress_shoulder = longDress_shoulder;
+    this.longDress_arm = longDress_arm;
+    this.longDress_edge = longDress_edge;
+    this.longDress_height = longDress_height;
+    this.longDress_waist = longDress_waist;
+  }
+}
 
-// guthub browser-lock
-var topData = document.getElementById("insertTopData");
-var key = objTop.length;
+var uploadData = document.getElementById("upload");
+uploadData.addEventListener("click", function() {
+  var s = document.getElementsByClassName("size")[0].getAttributeNode("value").value;
+  console.log(s);
+  var dressData;
+  try {
+      dressData = JSON.parse(localStorage["dressData"]);
+  } catch (e) {
+      dressData = new Array();
+  }
+  switch (s) {
+    case "1":
+    var top_name = document.getElementById("top_name").value;
+    var top_chest = document.getElementById("top_chest").value;
+    var top_shoulder = document.getElementById("top_shoulder").value;
+    var top_arm = document.getElementById("top_arm").value;
+    var top_height = document.getElementById("top_height").value;
+    insertTopData(top_name, top_chest, top_shoulder, top_arm, top_height);
 
-topData.addEventListener("click", function() {
-  var top_name = document.getElementById("top_name").value;
-  var top_chest = document.getElementById("top_chest").value;
-  var top_shoulder = document.getElementById("top_shoulder").value;
-  var top_arm = document.getElementById("top_arm").value;
-  var top_height = document.getElementById("top_height").value;
-  saveTop(key, {top_name, top_chest, top_shoulder, top_arm, top_height});
-  console.log(key);
+    function insertTopData(top_name, top_chest, top_shoulder, top_arm, top_height) {
+      var topItem = new Top(dressData.length, s, top_name, top_chest, top_arm, top_shoulder, top_height);
+      dressData.push(topItem);
+    }
+    break;
+
+    case "2":
+    var bottom_name = document.getElementById("bottom_name").value;
+    var bottom_edge = document.getElementById("bottom_edge").value;
+    var bottom_waist = document.getElementById("bottom_waist").value;
+    var bottom_under = document.getElementById("bottom_under").value;
+    var bottom_thigh = document.getElementById("bottom_thigh").value;
+    var bottom_height = document.getElementById("bottom_height").value;
+    insertBottomData(bottom_name, bottom_edge, bottom_waist, bottom_under, bottom_thigh, bottom_height);
+
+    function insertBottomData(bottom_name, bottom_edge, bottom_waist, bottom_under, bottom_thigh, bottom_height) {
+      var bottomItem = new Bottom(dressData.length, s, top_name, top_chest, top_arm, top_shoulder, top_height);
+      dressData.push(bottomItem);
+    }
+    break;
+
+    case "3":
+    var skirt_name = document.getElementById("skirt_name").value;
+    var skirt_edge = document.getElementById("skirt_edge").value;
+    var skirt_waist = document.getElementById("skirt_waist").value;
+    var skirt_height = document.getElementById("skirt_height").value;
+    insertSkirtData(skirt_name, skirt_edge, skirt_waist, skirt_height);
+
+    function insertSkirtData(skirt_name, skirt_edge, skirt_waist, skirt_height) {
+      var skirtItem = new Skirt(dressData.length, s, top_name, top_chest, top_arm, top_shoulder, top_height);
+      dressData.push(skirtItem);
+    }
+    break;
+
+    case "4":
+    var onepiece_name = document.getElementById("onepiece_name").value;
+    var onepiece_Chest = document.getElementById("onepiece_Chest").value;
+    var onepiece_shoulder = document.getElementById("onepiece_shoulder").value;
+    var onepiece_arm = document.getElementById("onepiece_arm").value;
+    var onepiece_heigth = document.getElementById("onepiece_heigth").value;
+    insertBottomData(onepiece_name, onepiece_Chest, onepiece_shoulder, onepiece_arm, onepiece_heigth);
+
+    function insertOnepieceData(onepiece_name, onepiece_Chest, onepiece_shoulder, onepiece_arm, onepiece_heigth) {
+      var onepieceItem = new Onepiece(dressData.length, s, top_name, top_chest, top_arm, top_shoulder, top_height);
+      dressData.push(onepieceItem);
+    }
+    break;
+
+    case "5":
+    var longDress_name = document.getElementById("longDress_name").value;
+    var longDress_Chest = document.getElementById("longDress_Chest").value;
+    var longDress_shoulder = document.getElementById("longDress_shoulder").value;
+    var longDress_arm = document.getElementById("longDress_arm").value;
+    var longDress_edge = document.getElementById("longDress_edge").value;
+    var longDress_height = document.getElementById("longDress_height").value;
+    var longDress_waist = document.getElementById("longDress_waist").value;
+    insertLongData(longDress_name, longDress_Chest, longDress_shoulder, longDress_arm, longDress_edge, longDress_height, longDress_waist);
+    break;
+
+    function insertLongData(longDress_name, longDress_Chest, longDress_shoulder, longDress_arm, longDress_edge, longDress_height, longDress_waist) {
+      var longItem = new Long(dressData.length, s, top_name, top_chest, top_arm, top_shoulder, top_height);
+      dressData.push(longItem);
+    }
+
+    default:
+    break;
+  }
+  localStorage.setItem("dressData", JSON.stringify(dressData));
+  // location.reload(); // 설정 필요.
 })
-
-function saveTop(key, {top_name, top_chest, top_shoulder, top_arm, top_height}) {
-  var item = {
-    top_name : top_name,
-    top_shoulder : top_shoulder,
-    top_chest : top_chest,
-    top_arm : top_arm,
-    top_height : top_height
-  };
-  objTop[key] = item;
-  chrome.storage.local.set(objTop[key]);
-}
-//
-// function saveBottom(key, item) {
-//   var item = {
-//     bottom_name,
-//     bottom_height,
-//     bottom_waist,
-//     bottom_thigh,
-//     bottom_under,
-//     bottom_edge
-//   }
-//   objBottom[key] = item;
-//   chrome.storage.local.set(objBottom, function () {
-//   });
-// }
-//
-// function saveSkirt(key, item) {
-//   var item = {
-//     skirt_name,
-//     skirt_height,
-//     skirt_waist,
-//     skirt_edge
-//   }
-//   objSkirt[key] = item;
-//   chrome.storage.local.set(objSkirt, function () {
-//   });
-// }
-//
-// function saveOnepiece(key, item) {
-//   var item = {
-//     onpiece_name,
-//     onepiece_shoulder,
-//     onepiece_Chest,
-//     onepiece_arm,
-//     onepiece_heigth
-//   }
-//   objOnepiece[key] = item;
-//   chrome.storage.local.set(objOnepiece, function () {
-//   });
-// }
-//
-// function saveLong(key, item) {
-//   var item = {
-//     Long_name,
-//     Long_shoulder,
-//     Long_Chest,
-//     Long_arm,
-//     Long_height,
-//     Long_waist,
-//     Long_edge
-//   }
-//   objLong[key] = item;
-//   chrome.storage.local.set(objLong, function () {
-//   });
-// }
-
-function get(key, success) {
-  whale.storage.local.get(key, function (items) {
-    success(items);
-  });
-  whale.storage.local.remove(key);
-}
-
-function clear() {
-  whale.storage.local.clear();
-}
