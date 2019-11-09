@@ -15,7 +15,10 @@ cloth.btn_create.addEventListener("click",function(){
     
     if(isNaN(cloth.data_waist)||isNaN(cloth.data_hem)||isNaN(cloth.data_height)){
         alert("숫자를 입력해주세요");
-    }else{
+    }else if(cloth.data_waist.length==0||cloth.data_hem.length==0||cloth.data_height.length==0){
+        alert("숫자를 입력해주세요");
+    }
+    else{
         var point_start_x = 100;
         var point_start_y = 50;
         var fixed_length = 3;

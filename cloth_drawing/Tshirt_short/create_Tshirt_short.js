@@ -17,7 +17,11 @@ cloth.btn_create.addEventListener("click",function(){
     
     if(isNaN(cloth.data_shoulder)||isNaN(cloth.data_chest)||isNaN(cloth.data_sleeve)||isNaN(cloth.data_height)){
         alert("숫자를 입력해주세요");
-    }else{
+    }
+    else if(cloth.data_shoulder.length==0||cloth.data_chest==0||cloth.data_sleeve==0||cloth.data_height==0){
+        alert("숫자를 입력해주세요");
+    }
+    else{
         var point_start_x = 100;
         var point_start_y = 50;
         var fixed_length = 3;

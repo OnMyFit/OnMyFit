@@ -19,7 +19,10 @@ cloth.btn_create.addEventListener("click",function(){
     
     if(isNaN(cloth.data_height)||isNaN(cloth.data_waist)||isNaN(cloth.data_thigh)||isNaN(cloth.data_under)||isNaN(cloth.data_edge)){
         alert("숫자를 입력해주세요");
-    }else{
+    }else if(cloth.data_height.length==0||cloth.data_waist.length==0||cloth.data_thigh.length==0||cloth.data_under.length==0||cloth.data_edge.length==0){
+        alert("숫자를 입력해주세요");
+    }
+    else{
         var point_start_x = 100;
         var point_start_y = 50;
         var fixed_length = 3;
