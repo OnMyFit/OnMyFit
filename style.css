@@ -148,20 +148,17 @@ body {
   text-align: center;
 }
 
-.box_button {
+.container > .box_button > span {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* .box_button {
   display: flex;
   align-items: center;
   padding: 8px 0;
   margin-left: 22%;
-}
-
-.container p {
-  font-size: 13px;
-}
-
-.cloth {
-  margin-top: 50px;
-}
+} */
 
 .cloth-size > span {
   margin-top: 50px;

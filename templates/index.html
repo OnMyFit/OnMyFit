@@ -4,7 +4,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <script type="text/javascript" src="../script.js"></script>
   <link rel="stylesheet" href="../style.css">
   <title>OnMyFit</title>
 </head>
@@ -23,9 +22,9 @@
           <span></span>
           <span></span>
           <div class="sidenav">
-            <a href="dress.html">기준옷 만들기</a>
+            <a href="dress.html" onclick="isCreate()">기준옷 만들기</a>
             <a href="list.html">기준옷 고르기</a>
-            <a href="doll.html">마네킹 만들기</a>
+            <!-- <a href="doll.html">마네킹 만들기</a> -->
           </div>
         </label>
       </input>
@@ -34,30 +33,40 @@
     <div class="container">
       <div class="box_button">
       <span style="color: rgb(0, 230, 181);" name="compare">옷 비교하기</span>
-      <input type="checkbox" id="switch">
+      <!-- <input type="checkbox" id="switch">
         <label for="switch">
           <img src="../images/switch.png" alt="" style="height: 25px; padding: 0px 15px;">
         </label>
       </input>
-      <span name="look" style="color: black;">마네킹 보기</span>
+      <span name="look" style="color: black;">마네킹 보기</span> -->
       </div>
-      <div class="cloth">
+      <!-- <div class="cloth">
         <img src="../images/hood.png" alt="" style="height: 300px;">
-      </div>
+      </div> -->
+      <svg width="300" height="300" id="mySvg"
+          viewbox="0 0 100 100">
+          <g>
+              <path id="path_01" d="" stroke="#00e6b5" fill="none"/>
+              <path id="path_02" d="" stroke="#00e6b5" fill="none"
+                  transform="translate(100,0) scale(-1,1)"/>
+          </g>
+          <circle id="myCircle"/>
+      </svg>
       <div class="cloth-size">
         <span></span>
         <div class="size">
-          <div class="item"> 가슴너비 <input type="text"> cm</div>
-          <div class="item"> 어깨너비 <input type="text"> cm</div>
-          <div class="item"> 소매길이 <input type="text"> cm</div>
-          <div class="item"> 상하길이 <input type="text"> cm</div>
+          <div class="item"> 가슴너비 <input type="text" id="text_chest" value="54"> cm</div>
+          <div class="item"> 어깨너비 <input type="text" id="text_shoulder" value="52"> cm</div>
+          <div class="item"> 소매길이 <input type="text" id="text_sleeve" value="22"> cm</div>
+          <div class="item"> 상하길이 <input type="text" id="text_height" value="72"> cm</div>
         </div>
         <div>
-          <button type="button">옷 비교하기</button>
+          <button type="button" id="button_create">옷 비교하기</button>
         </div>
       </div>
 
     </div>
   </div>
+  <script src="../cloth_drawing/Tshirt_short/create_Tshirt_short.js"></script>
 </body>
 </html>

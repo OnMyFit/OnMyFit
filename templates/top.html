@@ -4,7 +4,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <script type="text/javascript" src="../script.js"></script>
   <link rel="stylesheet" href="../style.css">
   <title>OnMyFit</title>
 </head>
@@ -25,7 +24,6 @@
       <div class="sidenav">
         <a href="dress.html">기준옷 만들기</a>
         <a href="list.html">기준옷 고르기</a>
-        <a href="doll.html">마네킹 만들기</a>
       </div>
     </label>
     </input>
@@ -35,15 +33,17 @@
     <p>상의 만들기에 필요한 정보를 입력해주세요.</p>
   <div class="cloth-size">
     <div class="size">
-      <div class="item"> 가슴너비 <input type="text"> cm</div>
-      <div class="item"> 어깨너비 <input type="text"> cm</div>
-      <div class="item"> 소매길이 <input type="text"> cm</div>
-      <div class="item"> 상하길이 <input type="text"> cm</div>
+      <div class="item"> 이름 <input type="text" id="top_name"></div>
+      <div class="item"> 가슴너비 <input type="text" id="top_chest"> cm</div>
+      <div class="item"> 어깨너비 <input type="text" id="top_shoulder"> cm</div>
+      <div class="item"> 소매길이 <input type="text" id="top_arm"> cm</div>
+      <div class="item"> 상하길이 <input type="text" id="top_height"> cm</div>
     </div>
     <div>
-      <button type="button">옷 등록하기</button>
+      <button type="button" onclick="insertTopData()">옷 등록하기</button>
     </div>
   </div>
+  <script type="text/javascript" src="../db.js"></script>
 
 </body>
 </html>

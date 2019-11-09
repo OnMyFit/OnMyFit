@@ -1,23 +1,22 @@
 {
-    // 필수부분
-    "manifest_version" : 2,
-    "name" : "가자가자가제",
-    "version" : "1.0.0",
-
-    // 추천 부분
-    "desciption" : "연습합니다 sgv",
-    //"default_locale" : "ko",
-
-    // 앱 구현 방식 선택
-    "sidebar_action" : {
-        "default_page" : "practice_svg.html",
-        "default_icon" : {
-            "16" : "Tshrit.jpg"
-        },
-        "default_title" : "가자가자과자",
-        "use_navigation_bar" : true
-    }
-
-    // 그 외 : 필요한 것을 선택적으로 추가
-
+  // 필수
+ "manifest_version": 2,
+ "name": "OnMyFit - 너의 옷, 나의 핏",
+ "version": "1.0.0",
+ "description": "자신의 옷과 사이트 옷을 비교해주는 서비스",
+ "icons": {
+   "16": "images/omf_icon.png",
+   "48": "images/omf_icon.png",
+   "128": "images/omf_icon.png"
+ },
+ //"default_locale" : "ko",
+ "web_accessible_resources": ["templates/*","images/*"],
+ "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+ "sidebar_action": {
+   "default_page": "templates/index.html",
+   "default_icon": {
+     "16": "images/omf_icon.png"
+   },
+   "default_title": "OnMyFit"
+ }
 }
