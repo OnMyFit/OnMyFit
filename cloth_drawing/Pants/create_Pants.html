@@ -1,0 +1,56 @@
+<!doctype html>
+
+<html>
+    <head>
+        <meta charset='utf-8'>
+        
+        <style>
+            h2 {
+                display: inline;
+            }
+            #mySvg {
+                border:solid;
+
+            }
+            .input_text {
+                
+            }
+        </style>
+        
+    </head>
+    <body>
+        <svg width="500" height="500" id="mySvg" 
+            viewbox="0 0 200 200">
+            <g>
+                <path id="path_01" d="" stroke="#00e6b5" fill="none" display="none"/>
+            </g>
+            <g>
+                <path id="path_02" d="" stroke="#00e6b5" fill="none"/>
+                <path id="path_03" d="" stroke="#00e6b5" fill="none"
+                        transform="translate(200,0) scale(-1,1)" display=""/>
+            </g>
+            <circle id="myCircle"/>
+        </svg>
+        <br>
+        <h2>총장</h2>
+        <input type=text class="input_text" id="text_height">
+        <h2>허리단면</h2>
+        <input type=text class="input_text" id="text_waist">
+        <br><h2>허벅지단면</h2>
+        <input type=text class="input_text" id="text_thigh">
+        <h2>밑위</h2>
+        <input type=text class="input_text" id="text_under">
+        <br>
+        <h2>밑단단면</h2>
+        <input type=text class="input_text" id="text_edge">
+        <br>
+        <input type=button id="button_create" value="생성">
+        <br>
+        <br>
+        <input type=button id="button_change" value="옆면보기">
+        <br>
+        <textarea id="textarea_01"></textarea>
+        <script src="create_Pants.js"></script>
+        <script src="change_mode.js"></script>
+    </body>
+</html>
