@@ -1,7 +1,21 @@
-
 //DB생성
 var db;
-var doneDB;
+var doneDB = false;
+
+var dressCreate = document.getElementById("isCreate");
+
+dressCreate.addEventListener("click", function(){
+  if (!doneDB) {
+    doneDB = true;
+
+    createDB();
+    createTopTable();
+    createBottomTable();
+    createSkirtTable();
+    createOnepieceTable();
+    createLongDress();
+  }
+})
 
 function createDB() {
   db = window.openDatabase("OnMyFit", "1.0", "테스트용DB", 4 * 1024 * 1024);
@@ -38,17 +52,17 @@ function createLongDress() {
   });
 }
 
-function isCreate() {
-  if (!doneDB) {
-    doneDB = true;
-    create();
-    createTopTable();
-    createBottomTable();
-    createSkirtTable();
-    createOnepieceTable();
-    createLongDress();
+var topData = document.getElementById("insertTopData");
+
+topData.addEventListener("click", function(){
+  function insertTopData() {
+    db.transaction(function(tx) {
+      tx.executeSql("insert into Top values(?,?,?,?,?)", [top_name.value, top_shoulder.value, top_chest.value, top_arm.value, top_height.value]);
+    });
   }
-}//data 삽입
+})
+
+//data 삽입
 function insertTopData() {
   db.transaction(function(tx) {
     tx.executeSql("insert into Top values(?,?,?,?,?)", [top_name.value, top_shoulder.value, top_chest.value, top_arm.value, top_height.value]);

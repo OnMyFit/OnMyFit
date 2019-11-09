@@ -9,9 +9,16 @@
    "48": "images/omf_icon.png",
    "128": "images/omf_icon.png"
  },
- //"default_locale" : "ko",
- "web_accessible_resources": ["templates/*","images/*"],
+
+ // "default_locale" : "ko",
+ // "web_accessible_resources": ["templates/*","images/*"],
+
  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+
+ "permissions": [
+   "storage"
+ ],
+
  "sidebar_action": {
    "default_page": "templates/index.html",
    "default_icon": {
