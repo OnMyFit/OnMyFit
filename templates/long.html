@@ -33,17 +33,17 @@
     </div>
 
     <div class="container">
-      <img src="../images/onepiece_icon.png" alt="">
+      <img src="../images/arrow_long.svg" alt="" style = "width : 370px; height : 370px;>
       <p>롱패팅/코드 만들기에 필요한 정보를 입력해주세요.</p>
       <div class="cloth-size">
         <div class="size" value="5">
           <div class="item"> name <input type="text" id="longDress_name"> cm</div>
-          <div class="item"> Chest <input type="text" id="longDress_Chest"> cm</div>
-          <div class="item"> shoulder <input type="text" id="longDress_shoulder"> cm</div>
-          <div class="item"> arm <input type="text" id="longDress_arm"> cm</div>
-          <div class="item">edge <input type="text" id="longDress_edge"> cm</div>
-          <div class="item"> height <input type="text" id="longDress_height"> cm</div>
-          <div class="item"> waist <input type="text" id="longDress_waist"> cm</div>
+          <div class="item"> Chest <input type="text" id="longDress_Chest" name="long_number"> cm</div>
+          <div class="item"> shoulder <input type="text" id="longDress_shoulder" name="long_number"> cm</div>
+          <div class="item"> arm <input type="text" id="longDress_arm" name="long_number"> cm</div>
+          <div class="item">edge <input type="text" id="longDress_edge" name="long_number"> cm</div>
+          <div class="item"> height <input type="text" id="longDress_height" name="long_number"> cm</div>
+          <div class="item"> waist <input type="text" id="longDress_waist" name="long_number"> cm</div>
         </div>
         <div>
           <button type="button" id="upload">옷 등록하기</button>
@@ -51,7 +51,8 @@
       </div>
     </div>
   </div>
-  <script src="../storage.js"></script>
+  <script src="../js/storage.js"></script>
+  <script src="../js/keyHandler.js"></script>
 </body>
 
 </html>
