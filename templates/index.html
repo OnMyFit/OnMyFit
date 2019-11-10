@@ -31,7 +31,9 @@
     </div>
     <div class="container">
       <div class="box_button">
+      <!--
       <span style="color: rgb(0, 230, 181);" name="compare">옷 비교하기</span>
+      -->
       <!-- <input type="checkbox" id="switch">
         <label for="switch">
           <img src="../images/switch.png" alt="" style="height: 25px; padding: 0px 15px;">
@@ -42,6 +44,8 @@
       <!-- <div class="cloth">
         <img src="../images/hood.png" alt="" style="height: 300px;">
       </div> -->
+      <img width="300" height="300" id="myPng" src="../images/shorttop.png"/>
+      <!--
       <svg width="300" height="300" id="mySvg"
           viewbox="0 0 100 100">
           <g>
@@ -51,23 +55,30 @@
           </g>
           <circle id="myCircle"/>
       </svg>
+      -->
       <div class="cloth-size">
         <span></span>
+        <!--
         <div class="size">
           <div class="item"> 가슴너비 <input type="text" id="text_chest" value="54"> cm</div>
           <div class="item"> 어깨너비 <input type="text" id="text_shoulder" value="52"> cm</div>
           <div class="item"> 소매길이 <input type="text" id="text_sleeve" value="22"> cm</div>
           <div class="item"> 상하길이 <input type="text" id="text_height" value="72"> cm</div>
         </div>
+      -->
         <div>
-          <button type="button" id="button_create">옷 비교하기</button>
-          <button type="button" id="button_delete">옷 삭제하기</button>
+          <button type="button" id="button_create">
+              <a href="./dress.html" style="color:white;">
+                기준 옷 만들기
+              </a>
+          </button>
         </div>
       </div>
 
     </div>
   </div>
+  <!--
   <script src="../cloth_drawing/Tshirt_short/create_Tshirt_short.js"></script>
-  <script src="../js/storage.js"></script>
+  -->
 </body>
 </html>
