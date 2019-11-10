@@ -104,6 +104,6 @@ cloth.btn_create.addEventListener("click",function(){
         document.getElementById("path_02").setAttribute("d", d_path);
         document.getElementById("path_02").setAttribute("stroke-width", "0.5");
         
-        document.getElementById("textarea_01").value = d_path;
+        //document.getElementById("textarea_01").value = d_path;
     }
 })
