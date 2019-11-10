@@ -61,23 +61,26 @@ class Long {
 }
 
 
+if (document.getElementById("button_delete")=== null){
+} else {
+  var button_delete = document.getElementById("button_delete");
 
-var button_delete = document.getElementById("button_delete");
-button_delete.addEventListener("click", deleteDB);
+  button_delete.addEventListener("click", deleteDB);
 
-function deleteDB(value) {
-  var arr = JSON.parse(localStorage["dressData"]);
-   arr.splice(value, 1);
+  function deleteDB(value) {
+    var arr = JSON.parse(localStorage["dressData"]);
+    arr.splice(value, 1);
 
-   var id = 0;
-   arr.forEach(value => {
-       value.id = id;
-       id++;
-   });
+    var id = 0;
+    arr.forEach(value => {
+        value.id = id;
+        id++;
+    });
 
-   localStorage.setItem("dressData", JSON.stringify(arr));
-   location.reload();
-}
+    localStorage.setItem("dressData", JSON.stringify(arr));
+    location.reload();
+}}
+
 
 
 var uploadData = document.getElementById("upload");
@@ -192,5 +195,5 @@ uploadData.addEventListener("click", function() {
                 break;
   }
   localStorage.setItem("dressData", JSON.stringify(dressData));
-  location.reload(); // 설정 필요.
+  //location.reload(); // 설정 필요.
 })

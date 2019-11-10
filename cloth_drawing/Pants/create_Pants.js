@@ -7,15 +7,15 @@ var cloth = {
     data_edge : null
 };
 
-cloth.btn_create = document.getElementById("button_create");
+cloth.btn_create = document.getElementById("upload");
 
 cloth.btn_create.addEventListener("click",function(){
 
-    cloth.data_height = document.getElementById("text_height").value;
-    cloth.data_waist = document.getElementById("text_waist").value;
-    cloth.data_thigh = document.getElementById("text_thigh").value;
-    cloth.data_under = document.getElementById("text_under").value;
-    cloth.data_edge = document.getElementById("text_edge").value;
+    cloth.data_height = document.getElementById("bottom_height").value;
+    cloth.data_waist = document.getElementById("bottom_waist").value;
+    cloth.data_thigh = document.getElementById("bottom_thigh").value;
+    cloth.data_under = document.getElementById("bottom_under").value;
+    cloth.data_edge = document.getElementById("bottom_edge").value;
     
     if(isNaN(cloth.data_height)||isNaN(cloth.data_waist)||isNaN(cloth.data_thigh)||isNaN(cloth.data_under)||isNaN(cloth.data_edge)){
         alert("숫자를 입력해주세요");
@@ -23,8 +23,8 @@ cloth.btn_create.addEventListener("click",function(){
         alert("숫자를 입력해주세요");
     }
     else{
-        var point_start_x = 100;
-        var point_start_y = 50;
+        var point_start_x = 75;
+        var point_start_y = 25;
         var fixed_length = 3;
     
         
@@ -186,13 +186,13 @@ cloth.btn_create.addEventListener("click",function(){
         
         d_path_front = d_path_front+"M "+point_front_pocket_x+" "+point_front_pocket_y;
         d_path_front = d_path_front+"C "+point_front_pocket_line_control_01_x+" "+point_front_pocket_line_control_01_y+" "+point_front_pocket_line_control_02_x+" "+point_front_pocket_line_control_02_y+" "+point_front_pocket_line_x+" "+point_front_pocket_line_y;
-        document.getElementById("path_01").setAttribute("d", d_path);
-        document.getElementById("path_01").setAttribute("stroke-width", "0.5");
+        document.getElementById("path_04").setAttribute("d", d_path);
+        document.getElementById("path_04").setAttribute("stroke-width", "0.5");
         
-        document.getElementById("path_02").setAttribute("d", d_path_front);
-        document.getElementById("path_02").setAttribute("stroke-width", "0.5");
-        document.getElementById("path_03").setAttribute("d", d_path_front);
-        document.getElementById("path_03").setAttribute("stroke-width", "0.5");
+        document.getElementById("path_05").setAttribute("d", d_path_front);
+        document.getElementById("path_05").setAttribute("stroke-width", "0.5");
+        document.getElementById("path_06").setAttribute("d", d_path_front);
+        document.getElementById("path_06").setAttribute("stroke-width", "0.5");
     
         //document.getElementById("textarea_01").value = d_path;
     }

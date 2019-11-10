@@ -5,13 +5,13 @@ var cloth = {
     data_height : null
 };
 
-cloth.btn_create = document.getElementById("button_create");
+cloth.btn_create = document.getElementById("upload");
 
 cloth.btn_create.addEventListener("click",function(){
     
-    cloth.data_waist = document.getElementById("text_waist").value;
-    cloth.data_hem = document.getElementById("text_hem").value;
-    cloth.data_height = document.getElementById("text_height").value;
+    cloth.data_waist = document.getElementById("skirt_waist").value;
+    cloth.data_hem = document.getElementById("skirt_edge").value;
+    cloth.data_height = document.getElementById("skirt_height").value;
     
     if(isNaN(cloth.data_waist)||isNaN(cloth.data_hem)||isNaN(cloth.data_height)){
         alert("숫자를 입력해주세요");
@@ -19,8 +19,8 @@ cloth.btn_create.addEventListener("click",function(){
         alert("숫자를 입력해주세요");
     }
     else{
-        var point_start_x = 100;
-        var point_start_y = 50;
+        var point_start_x = 50;
+        var point_start_y = 10;
         var fixed_length = 3;
     
         d_path = "M "+point_start_x+" "+point_start_y;
@@ -99,10 +99,10 @@ cloth.btn_create.addEventListener("click",function(){
         d_path = d_path+"C "+point_wrinkle_inner_control_01_x+" "+point_wrinkle_inner_control_01_y+" "+point_wrinkle_inner_control_02_x+" "+point_wrinkle_inner_control_02_y+" "+point_wrinkle_inner_top_x+" "+point_wrinkle_inner_top_y;
         //d_path = d_path+"L "+point_wrinkle_top_x+" "+point_wrinkle_top_y;
 
-        document.getElementById("path_01").setAttribute("d", d_path);
-        document.getElementById("path_01").setAttribute("stroke-width", "0.5");
-        document.getElementById("path_02").setAttribute("d", d_path);
-        document.getElementById("path_02").setAttribute("stroke-width", "0.5");
+        document.getElementById("path_03").setAttribute("d", d_path);
+        document.getElementById("path_03").setAttribute("stroke-width", "0.5");
+        document.getElementById("path_04").setAttribute("d", d_path);
+        document.getElementById("path_04").setAttribute("stroke-width", "0.5");
         
         //document.getElementById("textarea_01").value = d_path;
     }

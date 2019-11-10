@@ -6,14 +6,14 @@ var cloth = {
     data_height : null
 };
 
-cloth.btn_create = document.getElementById("button_create");
+cloth.btn_create = document.getElementById("upload");
 
 cloth.btn_create.addEventListener("click",function(){
 
-    cloth.data_shoulder = document.getElementById("text_shoulder").value;
-    cloth.data_chest = document.getElementById("text_chest").value;
-    cloth.data_sleeve = document.getElementById("text_sleeve").value;
-    cloth.data_height = document.getElementById("text_height").value;
+    cloth.data_shoulder = document.getElementById("top_shoulder").value;
+    cloth.data_chest = document.getElementById("top_chest").value;
+    cloth.data_sleeve = document.getElementById("top_arm").value;
+    cloth.data_height = document.getElementById("top_height").value;
 
     if(isNaN(cloth.data_shoulder)||isNaN(cloth.data_chest)||isNaN(cloth.data_sleeve)||isNaN(cloth.data_height)){
         alert("숫자를 입력해주세요");
@@ -22,8 +22,8 @@ cloth.btn_create.addEventListener("click",function(){
         alert("숫자를 입력해주세요");
     }
     else{
-        var point_start_x = 49.8;
-        var point_start_y = 15;
+        var point_start_x = 100;
+        var point_start_y = 50;
         var fixed_length = 3;
 
 
@@ -130,10 +130,10 @@ cloth.btn_create.addEventListener("click",function(){
 
 
 
-        document.getElementById("path_01").setAttribute("d", d_path);
-        document.getElementById("path_01").setAttribute("stroke-width", "0.5");
-        document.getElementById("path_02").setAttribute("d", d_path);
-        document.getElementById("path_02").setAttribute("stroke-width", "0.5");
+        document.getElementById("path_03").setAttribute("d", d_path);
+        document.getElementById("path_03").setAttribute("stroke-width", "0.5");
+        document.getElementById("path_04").setAttribute("d", d_path);
+        document.getElementById("path_04").setAttribute("stroke-width", "0.5");
 
         //document.getElementById("textarea_01").value = d_path;
     }
