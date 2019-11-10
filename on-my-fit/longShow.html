@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="style.css">
+  <title>OnMyFit</title>
+</head>
+
+<body>
+  <div class="main">
+    <a href="index.html">
+    <div class="icon">
+      <img src="omf_icon.png" alt="" style="width: 30px; height: 30px;">
+      <span>ON MY FIT</span>
+    </div>
+    </a>
+    <div class="side">
+      <input type="checkbox" id="menuicon">
+      <label for="menuicon">
+        <span></span>
+        <span></span>
+        <span></span>
+        <div class="sidenav">
+          <a href="dress.html">기준옷 만들기</a>
+          <a href="list.html">기준옷 고르기</a>
+        </div>
+      </label>
+      </input>
+    </div>
+
+    <div class="container">
+      <svg width="400" height="400" id="mySvg" viewbox="0 0 200 200">
+          <g>
+              <path id="path_01" d="" stroke="#00e6b5" fill="none"/>
+              <path id="path_02" d="" stroke="#00e6b5" fill="none"
+                  transform="translate(200,0) scale(-1,1)"/>
+          </g>
+          <g>
+              <path id="path_03" d="" stroke="rgb(0, 29, 85)" fill="none" stroke-dasharray="3"/>
+              <path id="path_04" d="" stroke="rgb(0, 29, 85)" fill="none" stroke-dasharray="3"
+                  transform="translate(200,0) scale(-1,1)"/>
+          </g>
+      </svg>
+      <p>비교할 롱패딩/코트 정보를 입력해주세요.</p>
+      <div class="cloth-size">
+        <div class="size" value="5">
+          <!--
+          <div class="item"> 이름 <input type="text" id="longDress_name"> </div>
+          -->
+          <div class="item"> 가슴 너비 <input type="text" id="longDress_Chest"> cm</div>
+          <div class="item"> 어깨 너비 <input type="text" id="longDress_shoulder"> cm</div>
+          <div class="item"> 소매 길이 <input type="text" id="longDress_arm"> cm</div>
+          <div class="item"> 밑단 길이 <input type="text" id="longDress_edge"> cm</div>
+          <div class="item"> 총장 <input type="text" id="longDress_height"> cm</div>
+          <div class="item"> 허리 너비 <input type="text" id="longDress_waist"> cm</div>
+        </div>
+        <div>
+          <button type="button" id="compare">옷 등록하기</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="storage.js"></script>
+  <script src="autoDrawingLong.js"></script>
+  <script src="create_Coat.js"></script>
+</body>
+
+</html>

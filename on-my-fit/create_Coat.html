@@ -1,0 +1,46 @@
+<!doctype html>
+
+<html>
+    <head>
+        <meta charset='utf-8'>
+        
+        <style>
+            h2 {
+                display: inline;
+            }
+            #mySvg {
+                border:solid;
+
+            }
+            .input_text {
+                
+            }
+        </style>
+        
+    </head>
+    <body>
+        <svg width="500" height="500" id="mySvg" 
+            viewbox="0 0 200 200">
+            <g>
+                <path id="path_01" d="" stroke="#00e6b5" fill="none"/>
+                <path id="path_02" d="" stroke="#00e6b5" fill="none"
+                    transform="translate(200,0) scale(-1,1)"/>
+            </g>
+            <circle id="myCircle"/>
+        </svg>
+        <br>
+        <h2>어깨너비</h2>
+        <input type=text class="input_text" id="text_shoulder">
+        <h2>가슴너비</h2>
+        <input type=text class="input_text" id="text_chest">
+        <br><h2>소매길이</h2>
+        <input type=text class="input_text" id="text_sleeve">
+        <h2>상하길이</h2>
+        <input type=text class="input_text" id="text_height">
+        <br>
+        <input type=button id="button_create" value="생성">
+        <br>
+        <textarea id="textarea_01"></textarea>
+        <script src="create_Coat.js"></script>
+    </body>
+</html>

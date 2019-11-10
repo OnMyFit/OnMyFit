@@ -1,0 +1,18 @@
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+    width="800" height="800" 
+    viewBox="0 0 200 200">
+    <!--style 작동이 안하네 일단 넘어가는데 따로 공부하도록-->
+    <path d="
+        M 100 50
+        L 120 50
+        L 121 55
+        L 100 55
+        M 100 50
+        L 100 144
+        L 117.5 144
+        M 121 55
+        C 123 65 125 70 130 74
+        L 117.5 144
+        "
+        stroke="#00e6b5" stroke-width="0.5" fill="none"/>
+</svg>
