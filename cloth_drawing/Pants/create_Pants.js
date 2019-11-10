@@ -75,6 +75,34 @@ cloth.btn_create.addEventListener("click",function(){
         
         d_path = d_path+"L "+point_cloth_bottom_right_x+" "+point_cloth_bottom_right_y;
         
+        //주머니 그리기
+        var length_waist_bottom_to_thigh = point_thigh_y - point_waist_bottom_y;
+
+        var point_pocket_left_top_x = point_start_x+cloth.data_waist*0.5*0.2;
+        var point_pocket_left_top_y = point_waist_bottom_y+3;
+
+        var point_pocket_right_top_x = point_start_x+cloth.data_waist*0.5*0.8;
+        var point_pocket_right_top_y = point_pocket_left_top_y;
+
+        d_path = d_path+"M "+point_pocket_left_top_x+" "+point_pocket_left_top_y;
+        d_path = d_path+"L "+point_pocket_right_top_x+" "+point_pocket_right_top_y;
+
+        var point_pocket_right_bottom_x = point_pocket_right_top_x;
+        var point_pocket_right_bottom_y = point_waist_bottom_y+length_waist_bottom_to_thigh*0.6;
+        d_path = d_path+"L "+point_pocket_right_bottom_x+" "+point_pocket_right_bottom_y;
+
+        var point_pocket_center_bottom_x = point_start_x+cloth.data_waist*0.25;
+        var length_pocket_triangle_height = (point_pocket_right_top_x-point_pocket_center_bottom_x)*parseFloat((Math.tan(30*(Math.PI/180)).toFixed(fixed_length)));
+        var point_pocket_center_bottom_y = point_pocket_right_bottom_y+length_pocket_triangle_height;
+
+        d_path = d_path+"L "+point_pocket_center_bottom_x+" "+point_pocket_center_bottom_y;
+
+        var point_pocket_left_bottom_x = point_pocket_left_top_x;
+        var point_pocket_left_bottom_y = point_pocket_center_bottom_y-length_pocket_triangle_height;
+
+        d_path = d_path+"L "+point_pocket_left_bottom_x+" "+point_pocket_left_bottom_y;
+        d_path = d_path+"L "+point_pocket_left_top_x+" "+point_pocket_left_top_y; 
+
     
         //-------------------------------------------------------------------------------------------------------
         //여기서 부터 바지 앞 모습
@@ -143,7 +171,21 @@ cloth.btn_create.addEventListener("click",function(){
         var point_front_thigh_to_bottom_control_02_y = point_front_thigh_y+4;
     
         d_path_front = d_path_front+"C "+point_front_thigh_to_bottom_control_01_x+" "+point_front_thigh_to_bottom_control_01_y+" "+point_front_thigh_to_bottom_control_02_x+" "+point_front_thigh_to_bottom_control_02_y+" "+point_front_cloth_bottom_right_x+" "+point_front_cloth_bottom_right_y;
-    
+        
+        //주머니 그리기
+        var point_front_pocket_x = point_front_waist_bottom_x;
+        var point_front_pocket_y = point_front_waist_bottom_y+8;
+
+        var point_front_pocket_line_x = point_start_x+cloth.data_waist*0.5*0.3;
+        var point_front_pocket_line_y = point_front_waist_to_center_bottom_y+1;
+
+        var point_front_pocket_line_control_01_x = point_start_x+cloth.data_waist*0.5*0.5;
+        var point_front_pocket_line_control_01_y = point_front_pocket_y;
+        var point_front_pocket_line_control_02_x = point_start_x+cloth.data_waist*0.5*0.4;
+        var point_front_pocket_line_control_02_y = point_front_pocket_y;
+        
+        d_path_front = d_path_front+"M "+point_front_pocket_x+" "+point_front_pocket_y;
+        d_path_front = d_path_front+"C "+point_front_pocket_line_control_01_x+" "+point_front_pocket_line_control_01_y+" "+point_front_pocket_line_control_02_x+" "+point_front_pocket_line_control_02_y+" "+point_front_pocket_line_x+" "+point_front_pocket_line_y;
         document.getElementById("path_01").setAttribute("d", d_path);
         document.getElementById("path_01").setAttribute("stroke-width", "0.5");
         
