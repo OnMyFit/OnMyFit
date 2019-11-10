@@ -68,8 +68,37 @@ cloth.btn_create.addEventListener("click",function(){
         var point_line_control_02_y = point_start_y+cloth.data_height*1;
     
         d_path = d_path+"C "+point_line_control_01_x+" "+point_line_control_01_y+" "+point_line_control_02_x+" "+point_line_control_02_y+" "+point_hem_right_x+" "+point_hem_right_y;
-    
         
+        //주름 생성
+        var point_wrinkle_bottom_x = point_start_x+cloth.data_hem*0.5*0.6;
+        var point_wrinkle_bottom_y = point_hem_center_y-1.5;
+
+        var point_wrinkle_top_x = point_start_x+cloth.data_hem*0.5*0.5;
+        var point_wrinkle_top_y = point_start_y+cloth.data_height*0.5;
+
+        var point_wrinkle_control_01_x = point_start_x+cloth.data_hem*0.5*0.6;
+        var point_wrinkle_control_01_y = point_start_y+cloth.data_height*0.9;
+
+        var point_wrinkle_control_02_x = point_start_x+cloth.data_hem*0.5*0.65;
+        var point_wrinkle_control_02_y = point_start_y+cloth.data_height*0.8
+        d_path = d_path+"M "+point_wrinkle_bottom_x+" "+point_wrinkle_bottom_y;
+        d_path = d_path+"C "+point_wrinkle_control_01_x+" "+point_wrinkle_control_01_y+" "+point_wrinkle_control_02_x+" "+point_wrinkle_control_02_y+" "+point_wrinkle_top_x+" "+point_wrinkle_top_y;
+        
+        var point_wrinkle_inner_bottom_x = point_start_x+cloth.data_hem*0.5*0.4;
+        var point_wrinkle_inner_bottom_y = point_hem_center_y-1.5;
+
+        var point_wrinkle_inner_top_x = point_start_x+cloth.data_hem*0.5*0.45;
+        var point_wrinkle_inner_top_y = point_start_y+cloth.data_height*0.7;
+
+        var point_wrinkle_inner_control_01_x = point_start_x+cloth.data_hem*0.5*0.4;
+        var point_wrinkle_inner_control_01_y = point_start_y+cloth.data_height*0.9;
+        var point_wrinkle_inner_control_02_x = point_start_x+cloth.data_hem*0.5*0.45;
+        var point_wrinkle_inner_control_02_y = point_start_y+cloth.data_height*0.8;
+
+        d_path = d_path+"M "+point_wrinkle_inner_bottom_x+" "+point_wrinkle_inner_bottom_y;
+        d_path = d_path+"C "+point_wrinkle_inner_control_01_x+" "+point_wrinkle_inner_control_01_y+" "+point_wrinkle_inner_control_02_x+" "+point_wrinkle_inner_control_02_y+" "+point_wrinkle_inner_top_x+" "+point_wrinkle_inner_top_y;
+        //d_path = d_path+"L "+point_wrinkle_top_x+" "+point_wrinkle_top_y;
+
         document.getElementById("path_01").setAttribute("d", d_path);
         document.getElementById("path_01").setAttribute("stroke-width", "0.5");
         document.getElementById("path_02").setAttribute("d", d_path);
