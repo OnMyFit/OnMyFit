@@ -26,30 +26,28 @@
         <div class="sidenav">
           <a href="dress.html">기준옷 만들기</a>
           <a href="list.html">기준옷 고르기</a>
-          <a href="index.html">비교하기</a>
         </div>
       </label>
       </input>
     </div>
     <div class="container">
-      <img src="../images/skirt_icon.png" alt="">
+      <img src="../images/arrow_skirt.svg" alt="" style="width : 370px; height : 370px;">
       <p>치마 만들기에 필요한 정보를 입력해주세요.</p>
-      <div class="cloth-size">
-        <div class="size" value="3">
-          <div class="item"> name <input type="text" id="skirt_name"> cm</div>
-          <div class="item"> edge <input type="text" id="skirt_edge"> cm</div>
-          <div class="item"> waist <input type="text" id="skirt_waist"> cm</div>
-          <div class="item"> height <input type="text" id="skirt_height"> cm</div>
-        </div>
-        <div>
-          <a href="dress.html">
-            <button type="button" id="upload">옷 등록하기</button>
-          </a>
-        </div>
+      <div class=" cloth-size">
+      <div class="size" value="3">
+        <div class="item"> name <input type="text" id="skirt_name"> cm</div>
+        <div class="item"> edge <input type="text" id="skirt_edge" name="skirt_number"> cm</div>
+        <div class="item"> waist <input type="text" id="skirt_waist" name="skirt_number"> cm</div>
+        <div class="item"> height <input type="text" id="skirt_height" name="skirt_number"> cm</div>
+      </div>
+      <div>
+        <button type="button" id="upload"><a href="list.html" style="color: white;">옷 등록하기</a></button>
       </div>
     </div>
   </div>
-  <script src="../storage.js"></script>
+  </div>
+  <script src="../js/storage.js"></script>
+  <script src="../js/keyHandler.js"></script>
 </body>
 
 </html>
