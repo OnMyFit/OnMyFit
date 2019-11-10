@@ -113,6 +113,8 @@ body {
   font-size: 10px;
   color: white;
   border-radius: 5px;
+  width: 70px;
+  text-align: center;
 }
 
 .sidenav a:hover {
@@ -212,4 +214,39 @@ body {
 
 .container > .dress {
   margin-left: -15px;
+}
+
+/* list.html */
+#listCon {
+  align-items: ;
+}
+
+.container > .box {
+  background: #3FD58E;
+  width: 150px;
+  height: 80px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.container > .box > .clothlist {
+  text-align: center;
+  margin-left: 15px;
+  font-size: 20px;
+  float: left;
+}
+
+.box > img {
+  height: 60px;
+  width: auto;
+  margin-left: 10px;
+  float: left;
+}
+
+.container > .box > .deletedate{
+  height: 40px;
+  width: auto;
+  padding-right: 5px;
+  float: right;
 }

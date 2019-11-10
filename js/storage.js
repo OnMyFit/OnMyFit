@@ -1,7 +1,7 @@
 class Top {
-  constructor(id, top_id, top_name, top_chest, top_arm, top_shoulder, top_height) {
+  constructor(id, cloth_id, top_name, top_chest, top_arm, top_shoulder, top_height) {
     this.id = id;
-    this.top_id = top_id;
+    this.cloth_id = cloth_id;
     this.top_name = top_name;
     this.top_chest = top_chest;
     this.top_arm = top_arm;
@@ -11,9 +11,9 @@ class Top {
 }
 
 class Bottom {
-  constructor(id, bottom_id, bottom_name, bottom_edge, bottom_waist, bottom_under, bottom_thigh, bottom_height) {
+  constructor(id, cloth_id, bottom_name, bottom_edge, bottom_waist, bottom_under, bottom_thigh, bottom_height) {
     this.id = id;
-    this.bottom_id = bottom_id;
+    this.cloth_id = cloth_id;
     this.bottom_name = bottom_name;
     this.bottom_edge = bottom_edge;
     this.bottom_waist = bottom_waist;
@@ -24,9 +24,9 @@ class Bottom {
 }
 
 class Skirt {
-  constructor(id, skirt_id, skirt_name, skirt_edge, skirt_waist, skirt_height) {
+  constructor(id, cloth_id, skirt_name, skirt_edge, skirt_waist, skirt_height) {
     this.id = id;
-    this.skirt_id = skirt_id;
+    this.cloth_id = cloth_id;
     this.skirt_name = skirt_name;
     this.skirt_edge = skirt_edge;
     this.skirt_waist = skirt_waist;
@@ -35,9 +35,9 @@ class Skirt {
 }
 
 class Onepiece {
-  constructor(id, onepiece_id, onepiece_name, onepiece_Chest, onepiece_shoulder, onepiece_arm, onepiece_heigth) {
+  constructor(id, cloth_id, onepiece_name, onepiece_Chest, onepiece_shoulder, onepiece_arm, onepiece_heigth) {
     this.id = id;
-    this.onepiece_id = onepiece_id;
+    this.cloth_id = cloth_id;
     this.onepiece_name = onepiece_name;
     this.onepiece_Chest = onepiece_Chest;
     this.onepiece_shoulder = onepiece_shoulder;
@@ -47,9 +47,9 @@ class Onepiece {
 }
 
 class Long {
-  constructor(id, long_id, longDress_name, longDress_Chest, longDress_shoulder, longDress_arm, longDress_edge, longDress_height, longDress_waist) {
+  constructor(id, cloth_id, longDress_name, longDress_Chest, longDress_shoulder, longDress_arm, longDress_edge, longDress_height, longDress_waist) {
     this.id = id;
-    this.long_id = long_id;
+    this.cloth_id = cloth_id;
     this.longDress_name = longDress_name;
     this.longDress_Chest = longDress_Chest;
     this.longDress_shoulder = longDress_shoulder;
@@ -95,7 +95,7 @@ uploadData.addEventListener("click", function() {
     insertBottomData(bottom_name, bottom_edge, bottom_waist, bottom_under, bottom_thigh, bottom_height);
 
     function insertBottomData(bottom_name, bottom_edge, bottom_waist, bottom_under, bottom_thigh, bottom_height) {
-      var bottomItem = new Bottom(dressData.length, s, top_name, top_chest, top_arm, top_shoulder, top_height);
+      var bottomItem = new Bottom(dressData.length, s, bottom_name, bottom_edge, bottom_waist, bottom_under, bottom_thigh, bottom_height);
       dressData.push(bottomItem);
     }
     break;
@@ -108,7 +108,7 @@ uploadData.addEventListener("click", function() {
     insertSkirtData(skirt_name, skirt_edge, skirt_waist, skirt_height);
 
     function insertSkirtData(skirt_name, skirt_edge, skirt_waist, skirt_height) {
-      var skirtItem = new Skirt(dressData.length, s, top_name, top_chest, top_arm, top_shoulder, top_height);
+      var skirtItem = new Skirt(dressData.length, s, skirt_name, skirt_edge, skirt_waist, skirt_height);
       dressData.push(skirtItem);
     }
     break;
@@ -119,10 +119,10 @@ uploadData.addEventListener("click", function() {
     var onepiece_shoulder = document.getElementById("onepiece_shoulder").value;
     var onepiece_arm = document.getElementById("onepiece_arm").value;
     var onepiece_heigth = document.getElementById("onepiece_heigth").value;
-    insertBottomData(onepiece_name, onepiece_Chest, onepiece_shoulder, onepiece_arm, onepiece_heigth);
+    insertOnepieceData(onepiece_name, onepiece_Chest, onepiece_shoulder, onepiece_arm, onepiece_heigth);
 
     function insertOnepieceData(onepiece_name, onepiece_Chest, onepiece_shoulder, onepiece_arm, onepiece_heigth) {
-      var onepieceItem = new Onepiece(dressData.length, s, top_name, top_chest, top_arm, top_shoulder, top_height);
+      var onepieceItem = new Onepiece(dressData.length, s, onepiece_name, onepiece_Chest, onepiece_shoulder, onepiece_arm, onepiece_heigth);
       dressData.push(onepieceItem);
     }
     break;
@@ -136,16 +136,16 @@ uploadData.addEventListener("click", function() {
     var longDress_height = document.getElementById("longDress_height").value;
     var longDress_waist = document.getElementById("longDress_waist").value;
     insertLongData(longDress_name, longDress_Chest, longDress_shoulder, longDress_arm, longDress_edge, longDress_height, longDress_waist);
-    break;
 
     function insertLongData(longDress_name, longDress_Chest, longDress_shoulder, longDress_arm, longDress_edge, longDress_height, longDress_waist) {
-      var longItem = new Long(dressData.length, s, top_name, top_chest, top_arm, top_shoulder, top_height);
+      var longItem = new Long(dressData.length, s, longDress_name, longDress_Chest, longDress_shoulder, longDress_arm, longDress_edge, longDress_height, longDress_waist);
       dressData.push(longItem);
     }
+    break;
 
     default:
     break;
   }
   localStorage.setItem("dressData", JSON.stringify(dressData));
-  // location.reload(); // 설정 필요.
+  location.reload(); // 설정 필요.
 })
