@@ -95,6 +95,7 @@ cloth.btn_create.addEventListener("click",function(){
         d_path = d_path+"M "+point_shoulder_x+" "+point_shoulder_y;
         d_path = d_path+"L "+point_chest_right_x+" "+point_chest_right_y;
 
+<<<<<<< HEAD
 
         //목 선은 원래 선 보다 2cm 낮게 설정
         //var point_neck_line_bottom_x = point_start_x;
@@ -137,4 +138,10 @@ cloth.btn_create.addEventListener("click",function(){
 
         //document.getElementById("textarea_01").value = d_path;
     }
+=======
+    document.getElementById("path_01").setAttribute("d", d_path);
+    document.getElementById("path_01").setAttribute("stroke-width", "0.5");
+    document.getElementById("path_02").setAttribute("d", d_path);
+    document.getElementById("path_02").setAttribute("stroke-width", "0.5");
+>>>>>>> 2f50718efe26f4c5ef3465d7decb2035ea96e35e
 })
