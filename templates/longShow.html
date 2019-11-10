@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="../style.css">
+  <title>OnMyFit</title>
+</head>
+
+<body>
+  <div class="main">
+    <a href="index.html">
+    <div class="icon">
+      <img src="../images/omf_icon.png" alt="" style="width: 30px; height: 30px;">
+      <span>ON MY FIT</span>
+    </div>
+    </a>
+    <div class="side">
+      <input type="checkbox" id="menuicon">
+      <label for="menuicon">
+        <span></span>
+        <span></span>
+        <span></span>
+        <div class="sidenav">
+          <a href="dress.html">기준옷 만들기</a>
+          <a href="list.html">기준옷 고르기</a>
+        </div>
+      </label>
+      </input>
+    </div>
+
+    <div class="container">
+      <svg width="300" height="300" id="mySvg" viewbox="0 0 100 100">
+          <g>
+              <path id="path_01" d="" stroke="#00e6b5" fill="none"/>
+              <path id="path_02" d="" stroke="#00e6b5" fill="none"
+                  transform="translate(100,0) scale(-1,1)"/>
+          </g>
+          <g>
+              <path id="path_01" d="" stroke="#00e6b5" fill="none"/>
+              <path id="path_02" d="" stroke="#00e6b5" fill="none"
+                  transform="translate(100,0) scale(-1,1)"/>
+          </g>
+      </svg>
+      <p>비교할 롱패딩/코트 정보를 입력해주세요.</p>
+      <div class="cloth-size">
+        <div class="size" value="4">
+          <div class="item"> name <input type="text" id="longDress_name"> cm</div>
+          <div class="item"> Chest <input type="text" id="longDress_Chest"> cm</div>
+          <div class="item"> shoulder <input type="text" id="longDress_shoulder"> cm</div>
+          <div class="item"> arm <input type="text" id="longDress_arm"> cm</div>
+          <div class="item">edge <input type="text" id="longDress_edge"> cm</div>
+          <div class="item"> height <input type="text" id="longDress_height"> cm</div>
+          <div class="item"> waist <input type="text" id="longDress_waist"> cm</div>
+        </div>
+        <div>
+          <button type="button" id="upload">옷 등록하기</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="../js/storage.js"></script>
+</body>
+
+</html>
