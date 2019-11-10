@@ -81,7 +81,7 @@ function check() {
       currentDiv.appendChild(listDiv);
 
       listSpan.addEventListener("click", function(){
-        
+
         console.log(JSON.parse(localStorage.getItem("dressData"))[this.getAttribute("value")]);
       })
     }
