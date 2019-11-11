@@ -1,20 +1,10 @@
 window.addEventListener('DOMContentLoaded', function() {
-if (document.getElementById("listCon")){
   check();
-} else {
-  // checkmate();
-}
 })
-
-// function checkmate() {
-//   var mateDiv = document.createElement("div");
-//   var dressData = JSON.parse(localStorage["dressData"])
-//   mateDiv.name =
-// }
 
 function check() {
   var currentDiv = document.getElementsByClassName("container")[0];
-  if (JSON.parse(localStorage.getItem("dressData"))[0] == null) {
+  if (JSON.parse(localStorage.getItem("dressData")) == null) {
     var nothingImg = document.createElement("img");
     nothingImg.src = "../images/nothing.png";
 
@@ -53,22 +43,17 @@ function check() {
 
         case "2":
           listImg.src = "../images/bottom_icon.png"
-          listA.href = "../templates/topShow.html"
+          listA.href = "../templates/bottomShow.html"
           break;
 
         case "3":
           listImg.src = "../images/skirt_icon.png"
-          listA.href = "../templates/topShow.html"
-          break;
-
-        case "4":
-          listImg.src = "../images/onepiece_icon.png"
-          listA.href = "../templates/topShow.html"
+          listA.href = "../templates/skirtShow.html"
           break;
 
         case "5":
           listImg.src = "../images/success_icon.png"
-          listA.href = "../templates/topShow.html"
+          listA.href = "../templates/longShow.html"
           break;
 
         default:
@@ -83,13 +68,11 @@ function check() {
       listSpan.appendChild(listContent2);
       listA.appendChild(listSpan);
 
-
-
       var delImg = document.createElement("img");
       delImg.className = "deletedate";
       delImg.id = i;
       delImg.src = "../images/nothing.png";
-      delImg.addEventListener('click', function (){
+      delImg.addEventListener('click', function() {
         deleteDB(this.id);
       });
       listDiv.appendChild(listImg);
@@ -97,21 +80,30 @@ function check() {
       listDiv.appendChild(delImg);
       currentDiv.appendChild(listDiv);
 
-      function deleteDB(value){
-         var arr = JSON.parse(localStorage["dressData"]);
-         arr.splice(value, 1);
+      function deleteDB(value) {
+        var arr = JSON.parse(localStorage["dressData"]);
+        arr.splice(value, 1);
 
-         var id = 0;
-         arr.forEach(value => {
-             value.id = id;
-             id++;
-         });
-
-         localStorage.setItem("dressData", JSON.stringify(arr));
-         location.reload();
-          listSpan.addEventListener("click", function(){
-            console.log(JSON.parse(localStorage.getItem("dressData"))[this.getAttribute("value")]);
-    })}
+        var id = 0;
+        arr.forEach(value => {
+          value.id = id;
+          id++;
+        });
+        localStorage.setItem("dressData", JSON.stringify(arr));
+        location.reload();
+      }
+      listSpan.addEventListener("click", function() {
+          var countCheck;
+          try {
+            countCheck = JSON.parse(localStorage["countCheck"]);
+          } catch (e) {
+            countCheck = new Array();
+          }
+        localStorage.setItem("countCheck", countCheck.length);
+        idDBLength = JSON.parse(localStorage.getItem("dressData"))[idDB].length
+        Object.value(JSON.parse(localStorage.getItem("dressData"))[idDB])[idDBLength-1]
+        console.log(JSON.parse(localStorage.getItem("dressData"))[this.getAttribute("value")]);
+      })
+    }
   }
-}
 }
