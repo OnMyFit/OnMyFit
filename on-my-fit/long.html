@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="style.css">
+  <title>OnMyFit</title>
+</head>
+
+<body>
+  <div class="main">
+    <a href="index.html">
+    <div class="icon">
+      <img src="omf_icon.png" alt="" style="width: 30px; height: 30px;">
+      <span>ON MY FIT</span>
+    </div>
+    </a>
+    <div class="side">
+      <input type="checkbox" id="menuicon">
+      <label for="menuicon">
+        <span></span>
+        <span></span>
+        <span></span>
+        <div class="sidenav">
+          <a href="dress.html">기준옷 만들기</a>
+          <a href="list.html" id="longnav">기준옷 고르기</a>
+        </div>
+      </label>
+      </input>
+    </div>
+
+    <div class="container">
+      <img src="arrow_long.svg" alt="" style = "width : 370px; height : 370px;">
+      <p>롱패팅/코드 만들기에 필요한 정보를 입력해주세요.</p>
+      <div class="cloth-size">
+        <div class="size" value="5">
+          <div class="item"> 이름 <input type="text" id="longDress_name"></div>
+          <div class="item"> 총장 길이 <input type="text" id="longDress_height" name="long_number"> cm</div>
+          <div class="item"> 가슴 너비 <input type="text" id="longDress_Chest" name="long_number"> cm</div>
+          <div class="item"> 어깨 너비 <input type="text" id="longDress_shoulder" name="long_number"> cm</div>
+          <div class="item"> 소매 길이 <input type="text" id="longDress_arm" name="long_number"> cm</div>
+        </div>
+        <div>
+          <button type="button" id="upload">옷 등록하기</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="storage.js"></script>
+  <script src="keyHandler.js"></script>
+  <script src="navbar.js"></script>
+</body>
+
+</html>

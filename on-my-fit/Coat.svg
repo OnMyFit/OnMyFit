@@ -1,0 +1,39 @@
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+    width="800" height="800" 
+    viewBox="0 0 200 200">
+    <svg viewbox="0 0 200 200"> 
+  <path d="
+        M 100 50
+        C 112 51 122 52 127.5 55
+        C 134.5 63.053 141 71.10 143 81.846
+        L 150.134 122.231
+        L 140.553 123.970
+        L 131 85
+        M 100 57
+        M 100 162
+        C 109.3 162 121.7 162 132 159
+        C 129 135 128 110 131 85
+        "
+        stroke="#00e6b5" stroke-width="0.5" fill="none"
+  />
+    <path d="
+        M 100 50
+        C 112 51 122 52 127.5 55
+        C 134.5 63.053 141 71.10 143 81.846
+        L 150.134 122.231
+        L 140.553 123.970
+        L 131 85
+        M 100 57
+        M 100 162
+        C 109.3 162 121.7 162 132 159
+        C 129 135 128 110 131 85
+        "
+        stroke="#00e6b5" stroke-width="0.5" fill="none"
+        transform="translate(200,0) scale(-1,1)"
+  />
+  
+</svg>
+    <!-->
+    <circle cx="100" cy="57" r="0.5" stroke="red" fill="red"/>
+    -->
+</svg>
