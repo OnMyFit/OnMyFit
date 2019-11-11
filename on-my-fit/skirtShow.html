@@ -25,7 +25,7 @@
         <span></span>
         <div class="sidenav">
           <a href="dress.html">기준옷 만들기</a>
-          <a href="list.html">기준옷 고르기</a>
+          <a href="list.html" id="skirtnav">기준옷 고르기</a>
         </div>
       </label>
       </input>
@@ -49,9 +49,9 @@
           <!--
           <div class="item"> 이름 <input type="text" id="skirt_name"> cm</div>
           -->
-          <div class="item"> 밑단 너비 <input type="text" id="skirt_edge"> cm</div>
-          <div class="item"> 허리 너비 <input type="text" id="skirt_waist"> cm</div>
-          <div class="item"> 총장 <input type="text" id="skirt_height"> cm</div>
+          <div class="item"> 밑단 너비 <input type="text" id="skirt_edge" name="skirt_number"> cm</div>
+          <div class="item"> 허리 너비 <input type="text" id="skirt_waist" name="skirt_number"> cm</div>
+          <div class="item"> 총장 <input type="text" id="skirt_height" name="skirt_number"> cm</div>
         </div>
         <div>
             <button type="button" id="compare">옷 비교하기</button>
@@ -63,6 +63,8 @@
   <script src="storage.js"></script>
   <script src="autoDrawingSkirt.js"></script>
   <script src="create_Skirt_short_H.js"></script>
+  <script src="navbar.js"></script>
+  <script src="keyHandler.js"></script>
 </body>
 
 </html>

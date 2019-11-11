@@ -25,7 +25,7 @@
         <span></span>
         <div class="sidenav">
           <a href="dress.html">기준옷 만들기</a>
-          <a href="list.html">기준옷 고르기</a>
+          <a href="list.html" id="bottomnav">기준옷 고르기</a>
         </div>
       </label>
       </input>
@@ -51,11 +51,11 @@
           <!--
           <div class="item"> 이름 <input type="text" id="bottom_name"> </div>
           -->
-          <div class="item"> 허리 단면 <input type="text" id="bottom_waist"> cm</div>
-          <div class="item"> 밑단 단면 <input type="text" id="bottom_edge"> cm</div>
-          <div class="item"> 밑위 <input type="text" id="bottom_under"> cm</div>
-          <div class="item"> 허벅지 단면 <input type="text" id="bottom_thigh"> cm</div>
-          <div class="item"> 총장 <input type="text" id="bottom_height"> cm</div>
+          <div class="item"> 허리 단면 <input type="text" id="bottom_waist" name="bottom_number"> cm</div>
+          <div class="item"> 밑단 단면 <input type="text" id="bottom_edge" name="bottom_number"> cm</div>
+          <div class="item"> 허벅지 단면 <input type="text" id="bottom_thigh" name="bottom_number"> cm</div>
+          <div class="item"> 밑위 <input type="text" id="bottom_under" name="bottom_number"> cm</div>
+          <div class="item"> 총장 <input type="text" id="bottom_height" name="bottom_number"> cm</div>
         </div>
         <div>
           <button type="button" id="compare">옷 비교하기</button>
@@ -68,6 +68,8 @@
   <script src="create_Pants.js"></script>
   <script src="change_mode.js"></script>
   <script src="autoDrawingBottom.js"></script>
+  <script src="navbar.js"></script>
+  <script src="keyHandler.js"></script>
 </body>
 
 </html>
