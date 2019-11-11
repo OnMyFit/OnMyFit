@@ -14,13 +14,13 @@ var cloth = {
     data_height : null
 };
 
-cloth.data_shoulder = document.getElementById("longDress_shoulder").value;
-cloth.data_chest = document.getElementById("longDress_Chest").value;
-cloth.data_sleeve = document.getElementById("longDress_arm").value;
-cloth.data_height = document.getElementById("longDress_height").value;
+cloth.data_shoulder = data_set.longDress_shoulder;
+cloth.data_chest = data_set.longDress_Chest;
+cloth.data_sleeve = data_set.longDress_arm;
+cloth.data_height = data_set.longDress_height;
 
 var point_start_x = 100;
-var point_start_y = 50;
+var point_start_y = 40;
 var fixed_length = 3;
 
 d_path = "M "+point_start_x+" "+point_start_y;

@@ -22,7 +22,7 @@ cloth.btn_create.addEventListener("click",function(){
     }
     else{
         var point_start_x = 100;
-        var point_start_y = 50;
+        var point_start_y = 40;
         var fixed_length = 3;
     
         
