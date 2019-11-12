@@ -58,7 +58,7 @@ function check() {
           break;
 
         case "5":
-          listImg.src = "success_icon.png"
+          listImg.src = "longpadding.jpg"
           listA.href = "longShow.html"
           break;
 
@@ -66,13 +66,13 @@ function check() {
           break;
       }
       var listSpan = document.createElement("span");
-
       listSpan.className = "clothlist";
       listSpan.setAttribute("value", idDB);
       var listContent = document.createTextNode(contentDB);
       var listContent2 = document.createTextNode("  (으로)비교하기");
       listSpan.appendChild(listContent);
       listSpan.appendChild(listContent2);
+      listSpan.style = "cursor: pointer;"
 
       listSpan.addEventListener("click", function(){
         console.log(this.getAttribute("value"));
@@ -92,7 +92,7 @@ function check() {
           case "4":
             addr = "topShow.html"
             break;
-          case "5": 
+          case "5":
             addr = "longShow.html"
             break;
           default:
@@ -100,9 +100,9 @@ function check() {
         }
         console.log(addr);
         location.href=addr+"?"+"data"+":"+myKey;
-        
+
         //this.getAttribute("value")
-        
+
       })
       //listA.appendChild(listSpan);
 //
